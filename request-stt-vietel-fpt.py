@@ -65,8 +65,9 @@ def requestAndWriteFile(audio_dir_path = 'cuted', transcript_out_dir = 'cuted_tr
                 res = requestVTC(audio_path)
                 if res == None:
                     print('all api failed! skip')
+                    exit()
             label_file.write(res)
             print('Transript success, file:{}'.format(name_label_file))
-        break
+        #break
 
 requestAndWriteFile('cuted', 'cuted_transcript')
